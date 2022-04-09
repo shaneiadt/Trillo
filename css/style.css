@@ -44,11 +44,12 @@ body {
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-1);
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .content {
   display: flex;
-  height: 80vh;
+  min-height: 80vh;
   align-items: stretch; }
 
 .sidebar {
@@ -59,3 +60,18 @@ body {
   background-color: #fff;
   background-color: orangered;
   flex: 1; }
+
+.logo {
+  height: 3.25rem; }
+
+.search__icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%; }
