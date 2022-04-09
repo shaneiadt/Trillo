@@ -11,10 +11,13 @@
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-1);
+    display: flex;
 }
 
 .content {
     display: flex;
+    height: 80vh;
+    align-items: stretch;
 }
 
 .sidebar {
@@ -25,4 +28,7 @@
 
 .hotel-view {
     background-color: #fff;
+    background-color: orangered;
+
+    flex: 1;
 }
