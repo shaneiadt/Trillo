@@ -1,32 +1,83 @@
 .logo {
-    height: 3.25rem;
+  height: 3.25rem;
+  margin-left: 3rem;
 }
 
 .search {
-    &__input {}
+  flex: 0 0 40%;
 
-    &__button {}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &__icon {
-        height: 2rem;
-        width: 2rem;
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem;
+
+    &:focus {
+      background-color: var(--color-grey-light-3);
+      outline: none;
+      width: 100%;
     }
+
+    &::-webkit-input-placeholder {
+        font-weight: 100;
+        color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 .user-nav {
-    &__icon-box {}
+  background-color: greenyellow;
 
-    &__icon {
-        height: 2.25rem;
-        width: 2.25rem;
-    }
+  display: flex;
 
-    &__notification {}
+  &__icon-box {
+  }
 
-    &__user-photo {
-        height: 3.75rem;
-        border-radius: 50%;
-    }
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-3);
+  }
 
-    &__user-name {}
+  &__notification {
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+  }
 }
