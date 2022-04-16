@@ -66,13 +66,13 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   flex: 0 0 60%;
   margin-right: 4.5rem;
@@ -80,8 +80,11 @@ body {
   padding: 3rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .logo {
   height: 3.25rem;
@@ -263,8 +266,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -318,6 +326,50 @@ body {
     width: 4rem;
     border-radius: 50%;
     box-sizing: content-box;
-    border: 3px solid #fff; }
+    border: 3px solid #fff;
+    transition: all 0.2s ease-out; }
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+    .recommend__photo:hover {
+      transform: translateY(-5px); }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  transition: all 0.3s; }
+  .review::before {
+    content: "";
+    background-image: url(../img/quote.png);
+    background-size: cover;
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    opacity: 0.05;
+    top: 0.5rem;
+    left: 1rem; }
+  .review:hover {
+    transform: translateY(-1rem) rotate(1deg); }
+  .review__user {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    margin-right: auto;
+    padding-left: 1.5rem; }
+  .review__user-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-weight: 100;
+    font-size: 1.2rem; }
+  .review__rating {
+    font-size: 2rem;
+    color: var(--color-primary); }
